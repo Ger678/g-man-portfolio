@@ -1,1 +1,93 @@
-<h1>test</h1>    
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>G-Man | The Matrix</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="matrix-page">
+  <canvas id="matrixCanvas"></canvas>
+  <div id="transitionOverlay" class="hidden"></div>
+  <nav class="matrix-nav">
+    <span class="nav-logo">&gt; G-MAN_</span>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">[MATRIX]</a>
+      <a href="sap-btp.html" class="nav-link" onclick="triggerMatrixExit(event)">[SAP BTP]</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="glitch-wrapper">
+        <h1 class="glitch" data-text="G-MAN">G-MAN</h1>
+      </div>
+      <p class="hero-sub">German Aguirre <span class="cursor-blink">|</span></p>
+      <p class="hero-desc">Full Stack Developer &middot; SAP BTP Specialist &middot; Autodidacta</p>
+      <div class="hero-quote">
+        <span class="quote-char">"</span>No eres el elegido por el destino, eres el elegido por tu codigo.<span class="quote-char">"</span>
+      </div>
+      <div class="hero-btns">
+        <a href="sap-btp.html" class="btn-matrix" onclick="triggerMatrixExit(event)"><span>ENTRAR AL PERFIL</span></a>
+        <a href="https://www.linkedin.com/in/german-aguirre/" target="_blank" class="btn-outline">LinkedIn</a>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-header">
+        <span class="t-dot red"></span><span class="t-dot yellow"></span><span class="t-dot green"></span>
+        <span class="t-title">terminal@g-man:~</span>
+      </div>
+      <div class="terminal-body">
+        <div class="t-line"><span class="t-prompt">$</span> whoami</div>
+        <div class="t-line t-output">German Alejandro Aguirre</div>
+        <div class="t-line"><span class="t-prompt">$</span> cat skills.txt</div>
+        <div class="t-line t-output" id="skillsOutput"></div>
+        <div class="t-line"><span class="t-prompt">$</span> cat location.txt</div>
+        <div class="t-line t-output">Rosario de Lerma, Salta, Argentina</div>
+        <div class="t-line"><span class="t-prompt">$</span> cat status.txt</div>
+        <div class="t-line t-output t-green">Available for challenging projects_</div>
+        <div class="t-line"><span class="t-prompt">$</span> <span class="cursor-blink-green">block</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="cards-section">
+    <h2 class="section-title">// CORE_MODULES</h2>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon">SAP</div>
+        <h3>SAP BTP</h3>
+        <p>CAP/CAPM, SAPUI5, Fiori, Cloud Foundry, OData, S/4HANA integrations.</p>
+        <div class="card-bar"><div class="bar-fill" style="--w:92%"></div></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">DEV</div>
+        <h3>Full Stack</h3> 
+        <p>Angular, Node.js, Python, REST APIs, ABAP. Soluciones end-to-end enterprise.</p>
+        <div class="card-bar"><div class="bar-fill" style="--w:88%"></div></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">AI</div>
+        <h3>AI y Automatizacion</h3>
+        <p>OpenAI APIs, chatbots NLP, n8n, deteccion de imagenes con IA.</p>
+        <div class="card-bar"><div class="bar-fill" style="--w:80%"></div></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">IOT</div>
+        <h3>IoT y Drones</h3>
+        <p>Thingworx, monitoreo con drones, integracion de datos industrial.</p>
+        <div class="card-bar"><div class="bar-fill" style="--w:75%"></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="stats-section">
+    <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">Anos de experiencia</span></div>
+    <div class="stat"><span class="stat-num" data-target="10">0</span><span class="stat-label">Tecnologias dominadas</span></div>
+    <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-label">% Remoto</span></div>
+    <div class="stat"><span class="stat-num" data-target="457">0</span><span class="stat-label">Conexiones LinkedIn</span></div>
+  </section>
+  <footer class="matrix-footer">
+    <p class="footer-text">&gt; german.aguirre@matrix ~ <span class="t-green">compiled successfully</span></p>
+    <p class="footer-copy">2026 G-Man. Built in the Matrix.</p>
+  </footer>
+  <script src="matrix.js"></script>
+</body>
+</html>
