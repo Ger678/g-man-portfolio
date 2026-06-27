@@ -9,14 +9,14 @@
     /* ===== BTP HERO TWO-COLUMN LAYOUT ===== */
     .sap-hero {
       min-height: 100vh;
-      display: flex;
+      display: flex !important;
       align-items: center;
       padding: 100px 40px 60px;
     }
     .sap-hero-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 60px !important;
       max-width: 1200px;
       margin: 0 auto;
       width: 100%;
@@ -68,7 +68,7 @@
       line-height: 1.5;
     }
     .hero-exp-list li::before {
-      content: '▸';
+      content: '\25B8';
       position: absolute;
       left: 0;
       color: #0070f3;
@@ -105,15 +105,17 @@
     .github-carousel-wrapper {
       position: relative;
       overflow: hidden;
+      width: 100%;
     }
     .github-carousel-track {
       display: flex;
       gap: 24px;
       transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      width: 100%;
     }
     .github-carousel-card {
-      min-width: calc(33.333% - 16px);
-      flex-shrink: 0;
+      flex: 0 0 auto;
+      width: calc(33.333% - 16px);
       background: #fff;
       border: 1px solid rgba(0,112,243,0.15);
       border-radius: 12px;
@@ -122,6 +124,7 @@
       flex-direction: column;
       gap: 12px;
       transition: transform 0.2s, box-shadow 0.2s;
+      box-sizing: border-box;
     }
     .github-carousel-card:hover {
       transform: translateY(-4px);
@@ -147,6 +150,7 @@
       align-items: center;
       justify-content: center;
       transition: all 0.2s;
+      line-height: 1;
     }
     .carousel-btn:hover {
       background: #0070f3;
@@ -156,9 +160,14 @@
       opacity: 0.3;
       cursor: not-allowed;
     }
+    .carousel-btn:disabled:hover {
+      background: transparent;
+      color: #0070f3;
+    }
     .carousel-dots {
       display: flex;
       gap: 8px;
+      align-items: center;
     }
     .carousel-dot {
       width: 8px;
@@ -170,18 +179,20 @@
     }
     .carousel-dot.active {
       background: #0070f3;
+      width: 20px;
+      border-radius: 4px;
     }
     @media (max-width: 768px) {
       .sap-hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
       }
       .hero-experience-left { order: 2; }
       .hero-profile-right { order: 1; }
-      .github-carousel-card { min-width: calc(100% - 0px); }
+      .github-carousel-card { width: 100% !important; }
     }
     @media (max-width: 1024px) and (min-width: 769px) {
-      .github-carousel-card { min-width: calc(50% - 12px); }
+      .github-carousel-card { width: calc(50% - 12px) !important; }
     }
   </style>
 </head>
@@ -208,7 +219,7 @@
         <div>
           <div class="hero-exp-title">Desarrollador SAP BTP / Full Stack</div>
           <div class="hero-exp-company">DL Consultores</div>
-          <div class="hero-exp-dates">Dic 2022 — Actualidad &nbsp;·&nbsp; +3 años</div>
+          <div class="hero-exp-dates">Dic 2022 &mdash; Actualidad &nbsp;&middot;&nbsp; +3 a&ntilde;os</div>
           <div class="hero-exp-divider"></div>
           <ul class="hero-exp-list">
             <li>Aplicaciones enterprise con SAPUI5, CAP, OData, Cloud Foundry y RAP</li>
@@ -318,7 +329,7 @@
   <section class="sap-section" id="projects">
     <h2 class="section-title-sap"><span class="section-num">05.</span> Proyectos GitHub</h2>
 
-    <div class="github-carousel-wrapper">
+    <div class="github-carousel-wrapper" id="carouselWrapper">
       <div class="github-carousel-track" id="carouselTrack">
 
         <div class="github-carousel-card sap-card">
@@ -326,11 +337,11 @@
             <span class="project-icon-sap">&#9672;</span>
             <span class="project-name-sap">btp-workflow-approvals</span>
           </div>
-          <p class="project-desc-sap">Workflow de aprobaciones multi-paso en SAP BTP usando BTP Workflow Service. Aprobaciones de órdenes de compra con notificaciones por email, integración con Fiori Inbox y backend CAP.</p>
+          <p class="project-desc-sap">Workflow de aprobaciones multi-paso en SAP BTP usando BTP Workflow Service. Aprobaciones de ordenes de compra con notificaciones por email, integracion con Fiori Inbox y backend CAP.</p>
           <div class="project-tags-sap">
             <span class="tag-sap">SAP BTP</span><span class="tag-sap">Workflow Service</span><span class="tag-sap">CAP</span><span class="tag-sap">Fiori Inbox</span>
           </div>
-          <a href="https://github.com/Ger678/btp-workflow-approvals" target="_blank" class="project-link-sap">Ver en GitHub →</a>
+          <a href="https://github.com/Ger678/btp-workflow-approvals" target="_blank" class="project-link-sap">Ver en GitHub &rarr;</a>
         </div>
 
         <div class="github-carousel-card sap-card">
@@ -342,7 +353,7 @@
           <div class="project-tags-sap">
             <span class="tag-sap">SAP BTP</span><span class="tag-sap">OpenAI API</span><span class="tag-sap">CAP</span><span class="tag-sap">SAPUI5</span><span class="tag-sap">SAP HANA</span>
           </div>
-          <a href="https://github.com/Ger678/openai-btp-chatbot" target="_blank" class="project-link-sap">Ver en GitHub →</a>
+          <a href="https://github.com/Ger678/openai-btp-chatbot" target="_blank" class="project-link-sap">Ver en GitHub &rarr;</a>
         </div>
 
         <div class="github-carousel-card sap-card">
@@ -350,11 +361,11 @@
             <span class="project-icon-sap">&#9672;</span>
             <span class="project-name-sap">sapui5-custom-controls</span>
           </div>
-          <p class="project-desc-sap">Librería de controles SAPUI5 reutilizables: filtros inteligentes, gráficos personalizados, componentes con tema BTP y XML fragments para aplicaciones Fiori enterprise.</p>
+          <p class="project-desc-sap">Libreria de controles SAPUI5 reutilizables: filtros inteligentes, graficos personalizados, componentes con tema BTP y XML fragments para aplicaciones Fiori enterprise.</p>
           <div class="project-tags-sap">
             <span class="tag-sap">SAPUI5</span><span class="tag-sap">Fiori</span><span class="tag-sap">SAP BTP</span><span class="tag-sap">XML Fragments</span>
           </div>
-          <a href="https://github.com/Ger678/sapui5-custom-controls" target="_blank" class="project-link-sap">Ver en GitHub →</a>
+          <a href="https://github.com/Ger678/sapui5-custom-controls" target="_blank" class="project-link-sap">Ver en GitHub &rarr;</a>
         </div>
 
         <div class="github-carousel-card sap-card">
@@ -362,11 +373,11 @@
             <span class="project-icon-sap">&#9672;</span>
             <span class="project-name-sap">btp-destination-service</span>
           </div>
-          <p class="project-desc-sap">Patrones del SAP BTP Destination Service: conexión a APIs externas, S/4HANA y sistemas on-premise desde Cloud Foundry usando CAP y el Destination Service.</p>
+          <p class="project-desc-sap">Patrones del SAP BTP Destination Service: conexion a APIs externas, S/4HANA y sistemas on-premise desde Cloud Foundry usando CAP y el Destination Service.</p>
           <div class="project-tags-sap">
             <span class="tag-sap">SAP BTP</span><span class="tag-sap">Destination Service</span><span class="tag-sap">Cloud Foundry</span><span class="tag-sap">CAP</span><span class="tag-sap">S/4HANA</span>
           </div>
-          <a href="https://github.com/Ger678/btp-destination-service" target="_blank" class="project-link-sap">Ver en GitHub →</a>
+          <a href="https://github.com/Ger678/btp-destination-service" target="_blank" class="project-link-sap">Ver en GitHub &rarr;</a>
         </div>
 
         <div class="github-carousel-card sap-card">
@@ -374,11 +385,11 @@
             <span class="project-icon-sap">&#9672;</span>
             <span class="project-name-sap">sap-cap-fiori-crud</span>
           </div>
-          <p class="project-desc-sap">Aplicación CRUD completa con SAP CAP (Cloud Application Programming Model) + Fiori Elements. Demuestra modelado CDS, servicios OData y anotaciones SAPUI5 Fiori Elements.</p>
+          <p class="project-desc-sap">Aplicacion CRUD completa con SAP CAP (Cloud Application Programming Model) + Fiori Elements. Demuestra modelado CDS, servicios OData y anotaciones SAPUI5 Fiori Elements.</p>
           <div class="project-tags-sap">
             <span class="tag-sap">CAP</span><span class="tag-sap">CDS</span><span class="tag-sap">OData</span><span class="tag-sap">Fiori Elements</span><span class="tag-sap">SAPUI5</span>
           </div>
-          <a href="https://github.com/Ger678/sap-cap-fiori-crud" target="_blank" class="project-link-sap">Ver en GitHub →</a>
+          <a href="https://github.com/Ger678/sap-cap-fiori-crud" target="_blank" class="project-link-sap">Ver en GitHub &rarr;</a>
         </div>
 
       </div>
@@ -408,77 +419,94 @@
 
   <script src="sap-btp.js"></script>
   <script>
-    // ===== CAROUSEL LOGIC =====
+    /* ===== CAROUSEL LOGIC ===== */
     (function() {
-      const track = document.getElementById('carouselTrack');
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      const dotsContainer = document.getElementById('carouselDots');
-      const cards = track ? track.querySelectorAll('.github-carousel-card') : [];
-      
-      let currentIndex = 0;
-      let visibleCount = 3;
-      
+      var wrapper = document.getElementById('carouselWrapper');
+      var track = document.getElementById('carouselTrack');
+      var prevBtn = document.getElementById('prevBtn');
+      var nextBtn = document.getElementById('nextBtn');
+      var dotsContainer = document.getElementById('carouselDots');
+      var cards = track ? track.querySelectorAll('.github-carousel-card') : [];
+
+      var currentIndex = 0;
+      var visibleCount = 3;
+
       function getVisibleCount() {
-        const w = window.innerWidth;
+        var w = window.innerWidth;
         if (w <= 768) return 1;
         if (w <= 1024) return 2;
         return 3;
       }
-      
+
+      function setCardWidths() {
+        if (!wrapper || !cards.length) return;
+        var vc = getVisibleCount();
+        var gap = 24;
+        var totalGaps = (vc - 1) * gap;
+        var cardW = (wrapper.offsetWidth - totalGaps) / vc;
+        for (var i = 0; i < cards.length; i++) {
+          cards[i].style.width = cardW + 'px';
+          cards[i].style.minWidth = cardW + 'px';
+          cards[i].style.maxWidth = cardW + 'px';
+          cards[i].style.flexShrink = '0';
+        }
+      }
+
       function getTotalSlides() {
         return Math.max(1, cards.length - visibleCount + 1);
       }
-      
+
       function buildDots() {
         dotsContainer.innerHTML = '';
-        const total = getTotalSlides();
-        for (let i = 0; i < total; i++) {
-          const dot = document.createElement('div');
+        var total = getTotalSlides();
+        for (var i = 0; i < total; i++) {
+          var dot = document.createElement('div');
           dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-          dot.addEventListener('click', () => goTo(i));
+          (function(idx) {
+            dot.addEventListener('click', function() { goTo(idx); });
+          })(i);
           dotsContainer.appendChild(dot);
         }
       }
-      
+
       function updateDots() {
-        const dots = dotsContainer.querySelectorAll('.carousel-dot');
-        dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+        var dots = dotsContainer.querySelectorAll('.carousel-dot');
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === currentIndex); });
       }
-      
-      function getCardWidth() {
+
+      function getSlideOffset() {
         if (!cards[0]) return 0;
-        const style = window.getComputedStyle(track);
-        const gap = parseInt(style.gap || style.columnGap || '24');
-        return cards[0].offsetWidth + gap;
+        return cards[0].offsetWidth + 24;
       }
-      
+
       function goTo(index) {
-        const total = getTotalSlides();
+        var total = getTotalSlides();
         currentIndex = Math.max(0, Math.min(index, total - 1));
-        const offset = currentIndex * getCardWidth();
+        var offset = currentIndex * getSlideOffset();
         track.style.transform = 'translateX(-' + offset + 'px)';
         prevBtn.disabled = currentIndex === 0;
         nextBtn.disabled = currentIndex >= total - 1;
         updateDots();
       }
-      
+
       window.carouselMove = function(dir) {
         goTo(currentIndex + dir);
       };
-      
+
       function init() {
         visibleCount = getVisibleCount();
+        setCardWidths();
         buildDots();
         goTo(0);
       }
-      
+
       window.addEventListener('resize', function() {
         visibleCount = getVisibleCount();
+        setCardWidths();
         buildDots();
         goTo(0);
       });
-      
+
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
       } else {
