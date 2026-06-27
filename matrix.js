@@ -90,7 +90,7 @@ function triggerMatrixExit(e) {
   overlay.innerHTML = '';
   overlay.appendChild(disCanvas);
   const label = document.createElement('div');
-  label.style.cssText = 'font-family:Share Tech Mono,monospace;font-size:2rem;color:#00ff41;text-shadow:0 0 20px #00ff41;z-index:1;letter-spacing:.3em;position:relative';
+  label.style.cssText = 'font-family:Share Tech Mono,monospace;font-size:2rem;color:#00ff41;text-shadow:0 0 20px #00ff41;z-index:1;letter-spacing:.3em;position:relative;background:rgb(0, 0, 0);padding:1.2rem 2.5rem;border:1px solid rgba(0,255,65,.3);border-radius:4px;box-shadow:0 0 40px rgba(0,0,0,.9),0 0 15px rgba(0,255,65,.15)';
   label.textContent = 'CONNECTING TO NODE...';
   overlay.appendChild(label);
   const ctx = disCanvas.getContext('2d');
@@ -123,7 +123,7 @@ function triggerMatrixExit(e) {
       setTimeout(() => { window.location.href = target; }, 300);
     }
   }, 30);
-  setTimeout(() => { overlay.style.opacity = '1'; }, 10);
+  setTimeout(() => { overlay.style.opacity = '1'; }, 100);
 }
 
 // ---- SAP EXIT TRANSITION (back to Matrix) ----

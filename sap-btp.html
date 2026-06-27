@@ -6,194 +6,8 @@
   <title>German Aguirre | SAP BTP Developer</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* ===== BTP HERO TWO-COLUMN LAYOUT ===== */
-    .sap-hero {
-      min-height: 100vh;
-      display: flex !important;
-      align-items: center;
-      padding: 100px 40px 60px;
-    }
-    .sap-hero-content {
-      display: grid !important;
-      grid-template-columns: 1fr 1fr !important;
-      gap: 60px !important;
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-      align-items: center;
-    }
-    /* Left column: Experience */
-    .hero-experience-left {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .hero-exp-label {
-      font-family: 'Courier New', monospace;
-      font-size: 0.75rem;
-      color: #0070f3;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      margin-bottom: 8px;
-    }
-    .hero-exp-title {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #1a1a2e;
-      margin-bottom: 4px;
-    }
-    .hero-exp-company {
-      font-size: 1rem;
-      color: #0070f3;
-      font-weight: 600;
-    }
-    .hero-exp-dates {
-      font-size: 0.85rem;
-      color: #666;
-      margin-bottom: 12px;
-    }
-    .hero-exp-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .hero-exp-list li {
-      font-size: 0.9rem;
-      color: #444;
-      padding-left: 20px;
-      position: relative;
-      line-height: 1.5;
-    }
-    .hero-exp-list li::before {
-      content: '\25B8';
-      position: absolute;
-      left: 0;
-      color: #0070f3;
-    }
-    .hero-exp-divider {
-      width: 40px;
-      height: 2px;
-      background: #0070f3;
-      margin: 8px 0;
-    }
-    .hero-tech-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-    .hero-chip {
-      font-size: 0.72rem;
-      padding: 4px 10px;
-      border-radius: 4px;
-      background: rgba(0,112,243,0.08);
-      color: #0070f3;
-      border: 1px solid rgba(0,112,243,0.2);
-      font-family: 'Courier New', monospace;
-    }
-    /* Right column: Profile */
-    .hero-profile-right {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    /* ===== GITHUB CAROUSEL ===== */
-    .github-carousel-wrapper {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-    }
-    .github-carousel-track {
-      display: flex;
-      gap: 24px;
-      transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      width: 100%;
-    }
-    .github-carousel-card {
-      flex: 0 0 auto;
-      width: calc(33.333% - 16px);
-      background: #fff;
-      border: 1px solid rgba(0,112,243,0.15);
-      border-radius: 12px;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-sizing: border-box;
-    }
-    .github-carousel-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,112,243,0.12);
-    }
-    .carousel-controls {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      margin-top: 32px;
-    }
-    .carousel-btn {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      border: 2px solid #0070f3;
-      background: transparent;
-      color: #0070f3;
-      font-size: 1.2rem;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s;
-      line-height: 1;
-    }
-    .carousel-btn:hover {
-      background: #0070f3;
-      color: #fff;
-    }
-    .carousel-btn:disabled {
-      opacity: 0.3;
-      cursor: not-allowed;
-    }
-    .carousel-btn:disabled:hover {
-      background: transparent;
-      color: #0070f3;
-    }
-    .carousel-dots {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-    .carousel-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(0,112,243,0.25);
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .carousel-dot.active {
-      background: #0070f3;
-      width: 20px;
-      border-radius: 4px;
-    }
-    @media (max-width: 768px) {
-      .sap-hero-content {
-        grid-template-columns: 1fr !important;
-        gap: 40px !important;
-      }
-      .hero-experience-left { order: 2; }
-      .hero-profile-right { order: 1; }
-      .github-carousel-card { width: 100% !important; }
-    }
-    @media (max-width: 1024px) and (min-width: 769px) {
-      .github-carousel-card { width: calc(50% - 12px) !important; }
-    }
+    @font-face{font-family:'SAP-icons';src:url('https://openui5.hana.ondemand.com/resources/sap/ui/core/themes/base/fonts/SAP-icons.woff2') format('woff2');font-weight:normal;font-style:normal}
+    .sap-icon{font-family:'SAP-icons';speak:none;font-style:normal;font-weight:400;-webkit-font-smoothing:antialiased;font-size:inherit;line-height:1}
   </style>
 </head>
 <body class="sap-page">
@@ -201,317 +15,326 @@
   <div id="transitionOverlay" class="hidden"></div>
   <nav class="sap-nav">
     <div class="nav-brand">
-      <span class="brand-icon">&#9672;</span>
+      <span class="brand-icon sap-icon">&#xe1c4;</span>
       <span class="brand-text">German Aguirre</span>
     </div>
-    <div class="nav-links">
-      <a href="index.html" class="nav-link-sap" onclick="triggerSAPExit(event)">[MATRIX]</a>
-      <a href="sap-btp.html" class="nav-link-sap active">[SAP BTP]</a>
+    <div class="nav-right">
+      <div class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+        <span class="toggle-label" id="themeIcon">&#9790;</span>
+        <div class="toggle-track"><div class="toggle-knob"></div></div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link-sap" onclick="triggerSAPExit(event)">[MATRIX]</a>
+        <a href="sap-btp.html" class="nav-link-sap active">[SAP BTP]</a>
+      </div>
     </div>
   </nav>
-
   <section class="sap-hero">
     <div class="sap-hero-content">
-
-      <!-- LEFT COLUMN: BTP Experience -->
-      <div class="hero-experience-left">
-        <div class="hero-exp-label">02. Experiencia</div>
-        <div>
-          <div class="hero-exp-title">Desarrollador SAP BTP / Full Stack</div>
-          <div class="hero-exp-company">DL Consultores</div>
-          <div class="hero-exp-dates">Dic 2022 &mdash; Actualidad &nbsp;&middot;&nbsp; +3 a&ntilde;os</div>
-          <div class="hero-exp-divider"></div>
-          <ul class="hero-exp-list">
-            <li>Aplicaciones enterprise con SAPUI5, CAP, OData, Cloud Foundry y RAP</li>
-            <li>Integraciones con SharePoint, SAP DMS, SAP HANA y S/4HANA Cloud</li>
-            <li>Sistema de monitoreo con drones + IA + chatbot OpenAI en SAP BTP</li>
-            <li>Desarrollo IoT con Thingworx en equipo multinacional</li>
-            <li>Proyectos de facturacion electronica (FCE)</li>
-          </ul>
-        </div>
-        <div class="hero-tech-chips">
-          <span class="hero-chip">SAPUI5</span>
-          <span class="hero-chip">CAP / CAPM</span>
-          <span class="hero-chip">OData</span>
-          <span class="hero-chip">Cloud Foundry</span>
-          <span class="hero-chip">Fiori</span>
-          <span class="hero-chip">ABAP</span>
-          <span class="hero-chip">S/4HANA</span>
-          <span class="hero-chip">SAP HANA</span>
-          <span class="hero-chip">Node.js</span>
-          <span class="hero-chip">OpenAI APIs</span>
-          <span class="hero-chip">RAP</span>
-          <span class="hero-chip">Thingworx</span>
-        </div>
-      </div>
-
-      <!-- RIGHT COLUMN: Profile -->
-      <div class="hero-profile-right">
-        <div class="sap-badge">SAP BTP DEVELOPER</div>
-        <h1 class="sap-title">German <span class="highlight-sap">Alejandro</span> Aguirre</h1>
-        <p class="sap-subtitle">Tecnico en Desarrollo de Software &middot; Full Stack &middot; DL Consultores</p>
-        <p class="sap-location">Rosario de Lerma, Salta, Argentina &middot; 100% Remoto</p>
-        <div class="sap-cta">
-          <a href="https://www.linkedin.com/in/german-aguirre/" target="_blank" class="btn-sap primary">LinkedIn</a>
-          <a href="index.html" class="btn-sap secondary" onclick="triggerSAPExit(event)">Ver perfil Matrix</a>
-        </div>
-        <div class="btp-sphere">
-          <div class="sphere-ring-1"></div>
-          <div class="sphere-ring-2"></div>
-          <div class="sphere-ring-3"></div>
-          <div class="sphere-core">BTP</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="sap-section" id="about">
-    <h2 class="section-title-sap"><span class="section-num">01.</span> Acerca de mi</h2>
-    <div class="about-sap-content">
-      <p class="about-sap-text">Soy Desarrollador Full Stack con mas de 4 anos de experiencia, actualmente especializado en SAP Business Technology Platform (BTP) en DL Consultores.</p>
-      <p class="about-sap-text">Desde diciembre de 2022 desarrollo soluciones para clientes enterprise en sectores de e-commerce, industria y consumo masivo. Lidere sistemas de monitoreo con drones integrando deteccion de imagenes con IA y chatbot OpenAI en SAP BTP.</p>
-      <p class="about-sap-text">Me especialice en SAP BTP y SAP Fiori, entregando aplicaciones enterprise con SAPUI5, CAP, OData, Cloud Foundry y RAP. Autodidacta, 100% remoto y siempre buscando el proximo desafio complejo.</p>
-      <div class="skills-grid-sap">
-        <span class="skill-tag-sap">SAPUI5</span><span class="skill-tag-sap">CAP / CAPM</span><span class="skill-tag-sap">OData</span><span class="skill-tag-sap">Cloud Foundry</span><span class="skill-tag-sap">Fiori</span><span class="skill-tag-sap">ABAP</span><span class="skill-tag-sap">S/4HANA</span><span class="skill-tag-sap">SAP HANA</span><span class="skill-tag-sap">Angular</span><span class="skill-tag-sap">Node.js</span><span class="skill-tag-sap">Python</span><span class="skill-tag-sap">OpenAI APIs</span><span class="skill-tag-sap">SharePoint</span><span class="skill-tag-sap">SAP DMS</span><span class="skill-tag-sap">n8n</span><span class="skill-tag-sap">IoT / Thingworx</span><span class="skill-tag-sap">REST APIs</span><span class="skill-tag-sap">RAP</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="sap-section" id="stack">
-    <h2 class="section-title-sap"><span class="section-num">03.</span> Stack Tecnico</h2>
-    <div class="stack-grid-sap">
-      <div class="stack-category">
-        <h3 class="stack-cat-title">SAP BTP &amp; FIORI</h3>
-        <div class="stack-items">
-          <span class="stack-item">SAPUI5</span><span class="stack-item">CAP / CAPM</span><span class="stack-item">OData</span><span class="stack-item">Fiori Elements</span><span class="stack-item">Cloud Foundry</span><span class="stack-item">RAP</span>
-        </div>
-      </div>
-      <div class="stack-category">
-        <h3 class="stack-cat-title">BACKEND &amp; INTEGRACIONES</h3>
-        <div class="stack-items">
-          <span class="stack-item">ABAP</span><span class="stack-item">Node.js</span><span class="stack-item">Python</span><span class="stack-item">S/4HANA Cloud</span><span class="stack-item">SAP HANA</span><span class="stack-item">REST APIs</span>
-        </div>
-      </div>
-      <div class="stack-category">
-        <h3 class="stack-cat-title">FRONTEND &amp; AI</h3>
-        <div class="stack-items">
-          <span class="stack-item">Angular</span><span class="stack-item">OpenAI APIs</span><span class="stack-item">n8n Automation</span><span class="stack-item">Thingworx / IoT</span><span class="stack-item">SharePoint</span><span class="stack-item">SAP DMS</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sap-section" id="education">
-    <h2 class="section-title-sap"><span class="section-num">04.</span> Educacion</h2>
-    <div class="edu-grid-sap">
-      <div class="edu-card-sap">
-        <div class="edu-icon">Grad</div>
-        <h3>Tecnico en Desarrollo de Software</h3>
-        <p class="edu-org">UPATECO</p>
-        <p class="edu-date">2025</p>
-      </div>
-      <div class="edu-card-sap">
-        <div class="edu-icon">AI</div>
-        <h3>Automatizacion con IA (n8n)</h3>
-        <p class="edu-org">Formacion continua autodidacta</p>
-        <p class="edu-date">2025 - Actualidad</p>
-      </div>
-      <div class="edu-card-sap">
-        <div class="edu-icon">PLC</div>
-        <h3>Programacion PLC</h3>
-        <p class="edu-org">Capacitacion industrial en curso</p>
-        <p class="edu-date">2025 - Actualidad</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="sap-section" id="projects">
-    <h2 class="section-title-sap"><span class="section-num">05.</span> Proyectos GitHub</h2>
-
-    <div class="github-carousel-wrapper" id="carouselWrapper">
-      <div class="github-carousel-track" id="carouselTrack">
-
-        <div class="github-carousel-card sap-card">
-          <div class="project-header-sap">
-            <span class="project-icon-sap">&#9672;</span>
-            <span class="project-name-sap">btp-workflow-approvals</span>
-          </div>
-          <p class="project-desc-sap">Workflow de aprobaciones multi-paso en SAP BTP usando BTP Workflow Service. Aprobaciones de ordenes de compra con notificaciones por email, integracion con Fiori Inbox y backend CAP.</p>
-          <div class="project-tags-sap">
-            <span class="tag-sap">SAP BTP</span><span class="tag-sap">Workflow Service</span><span class="tag-sap">CAP</span><span class="tag-sap">Fiori Inbox</span>
-          </div>
-          <a href="https://github.com/Ger678/btp-workflow-approvals" target="_blank" class="project-link-sap">Ver en GitHub &rarr;</a>
-        </div>
-
-        <div class="github-carousel-card sap-card">
-          <div class="project-header-sap">
-            <span class="project-icon-sap">&#9672;</span>
-            <span class="project-name-sap">openai-btp-chatbot</span>
-          </div>
-          <p class="project-desc-sap">Chatbot impulsado por IA construido en SAP BTP usando OpenAI API + CAP. Interfaz de lenguaje natural para consultar datos SAP, integrado con frontend SAPUI5 y SAP HANA.</p>
-          <div class="project-tags-sap">
-            <span class="tag-sap">SAP BTP</span><span class="tag-sap">OpenAI API</span><span class="tag-sap">CAP</span><span class="tag-sap">SAPUI5</span><span class="tag-sap">SAP HANA</span>
-          </div>
-          <a href="https://github.com/Ger678/openai-btp-chatbot" target="_blank" class="project-link-sap">Ver en GitHub &rarr;</a>
-        </div>
-
-        <div class="github-carousel-card sap-card">
-          <div class="project-header-sap">
-            <span class="project-icon-sap">&#9672;</span>
-            <span class="project-name-sap">sapui5-custom-controls</span>
-          </div>
-          <p class="project-desc-sap">Libreria de controles SAPUI5 reutilizables: filtros inteligentes, graficos personalizados, componentes con tema BTP y XML fragments para aplicaciones Fiori enterprise.</p>
-          <div class="project-tags-sap">
-            <span class="tag-sap">SAPUI5</span><span class="tag-sap">Fiori</span><span class="tag-sap">SAP BTP</span><span class="tag-sap">XML Fragments</span>
-          </div>
-          <a href="https://github.com/Ger678/sapui5-custom-controls" target="_blank" class="project-link-sap">Ver en GitHub &rarr;</a>
-        </div>
-
-        <div class="github-carousel-card sap-card">
-          <div class="project-header-sap">
-            <span class="project-icon-sap">&#9672;</span>
-            <span class="project-name-sap">btp-destination-service</span>
-          </div>
-          <p class="project-desc-sap">Patrones del SAP BTP Destination Service: conexion a APIs externas, S/4HANA y sistemas on-premise desde Cloud Foundry usando CAP y el Destination Service.</p>
-          <div class="project-tags-sap">
-            <span class="tag-sap">SAP BTP</span><span class="tag-sap">Destination Service</span><span class="tag-sap">Cloud Foundry</span><span class="tag-sap">CAP</span><span class="tag-sap">S/4HANA</span>
-          </div>
-          <a href="https://github.com/Ger678/btp-destination-service" target="_blank" class="project-link-sap">Ver en GitHub &rarr;</a>
-        </div>
-
-        <div class="github-carousel-card sap-card">
-          <div class="project-header-sap">
-            <span class="project-icon-sap">&#9672;</span>
-            <span class="project-name-sap">sap-cap-fiori-crud</span>
-          </div>
-          <p class="project-desc-sap">Aplicacion CRUD completa con SAP CAP (Cloud Application Programming Model) + Fiori Elements. Demuestra modelado CDS, servicios OData y anotaciones SAPUI5 Fiori Elements.</p>
-          <div class="project-tags-sap">
-            <span class="tag-sap">CAP</span><span class="tag-sap">CDS</span><span class="tag-sap">OData</span><span class="tag-sap">Fiori Elements</span><span class="tag-sap">SAPUI5</span>
-          </div>
-          <a href="https://github.com/Ger678/sap-cap-fiori-crud" target="_blank" class="project-link-sap">Ver en GitHub &rarr;</a>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="carousel-controls">
-      <button class="carousel-btn" id="prevBtn" onclick="carouselMove(-1)" disabled>&#8592;</button>
-      <div class="carousel-dots" id="carouselDots"></div>
-      <button class="carousel-btn" id="nextBtn" onclick="carouselMove(1)">&#8594;</button>
-    </div>
-  </section>
-
-  <section class="sap-section" id="contact">
-    <h2 class="section-title-sap"><span class="section-num">06.</span> Contacto</h2>
-    <div class="contact-sap">
-      <p class="contact-sap-text">Tenes un proyecto SAP BTP o enterprise? Hablemos!</p>
-      <div class="contact-links-sap">
+      <div class="sap-badge">SAP BTP DEVELOPER</div>
+      <h1 class="sap-title">German <span class="highlight-sap">Alejandro</span> Aguirre</h1>
+      <p class="sap-subtitle">Tecnico en Desarrollo de Software &middot; Full Stack &middot; DL Consultores</p>
+      <p class="sap-location">Rosario de Lerma, Salta, Argentina &middot; 100% Remoto</p>
+      <div class="sap-cta">
         <a href="https://www.linkedin.com/in/german-aguirre/" target="_blank" class="btn-sap primary">LinkedIn</a>
-        <a href="index.html" onclick="triggerSAPExit(event)" class="btn-sap secondary">Portfolio</a>
+        <a href="index.html" class="btn-sap secondary" onclick="triggerSAPExit(event)">Ver perfil Matrix</a>
+      </div>
+    </div>
+    <div class="sap-hero-visual">
+      <div class="btp-sphere">
+        <div class="sphere-ring ring-1"></div>
+        <div class="sphere-ring ring-2"></div>
+        <div class="sphere-ring ring-3"></div>
+        <div class="sphere-core"><span>SAP</span></div>
       </div>
     </div>
   </section>
-
+  <section class="sap-about">
+    <div class="container">
+      <h2 class="sap-section-title"><span class="sap-accent"><span class="sap-icon">&#xe038;</span></span> Acerca de mi</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Soy Desarrollador Full Stack con mas de <strong>4 anos de experiencia</strong>, actualmente especializado en <strong>SAP Business Technology Platform (BTP)</strong> en DL Consultores.</p>
+          <p>Desde diciembre de 2022 desarrollo soluciones para clientes enterprise en sectores de e-commerce, industria y consumo masivo. Lidere sistemas de monitoreo con drones integrando deteccion de imagenes con IA y chatbot OpenAI en SAP BTP.</p>
+          <p>Me especialice en <strong>SAP BTP y SAP Fiori</strong>, entregando aplicaciones enterprise con SAPUI5, CAP, OData, Cloud Foundry y RAP. Autodidacta, 100% remoto y siempre buscando el proximo desafio complejo.</p>
+        </div>
+        <div class="about-tags">
+          <span class="tag">SAPUI5</span>
+          <span class="tag">CAP / CAPM</span>
+          <span class="tag">OData</span>
+          <span class="tag">Cloud Foundry</span>
+          <span class="tag">Fiori</span>
+          <span class="tag">ABAP</span>
+          <span class="tag">S/4HANA</span>
+          <span class="tag">SAP HANA</span>
+          <span class="tag">Angular</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Python</span>
+          <span class="tag">OpenAI APIs</span>
+          <span class="tag">SharePoint</span>
+          <span class="tag">SAP DMS</span>
+          <span class="tag">n8n</span>
+          <span class="tag">IoT / Thingworx</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">RAP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sap-experience">
+    <div class="container exp-projects-grid">
+      <div class="exp-col">
+        <h2 class="sap-section-title"><span class="sap-accent"><span class="sap-icon">&#xe093;</span></span> Experiencia</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="tl-content">
+              <div class="tl-header">
+                <h3>Desarrollador SAP BTP / Full Stack</h3>
+                <span class="tl-company">DL Consultores</span>
+                <span class="tl-date">Dic 2022 &mdash; Actualidad</span>
+              </div>
+              <ul class="tl-bullets">
+                <li>Aplicaciones enterprise con SAPUI5, CAP, OData, Cloud Foundry y RAP</li>
+                <li>Integraciones con SharePoint, SAP DMS, SAP HANA y S/4HANA Cloud</li>
+                <li>Sistema de monitoreo con drones + IA + chatbot OpenAI en SAP BTP</li>
+                <li>Desarrollo IoT con Thingworx en equipo multinacional</li>
+                <li>Proyectos de facturacion electronica (FCE)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="proj-col">
+        <h2 class="sap-section-title">Proyectos GitHub</h2>
+        <div class="project-carousel">
+          <div class="carousel-track">
+            <div class="project-card">
+              <div class="project-card-top">
+                <span class="project-icon-box sap-icon">&#xe0ab;</span>
+                <h3>btp-workflow-approvals</h3>
+              </div>
+              <div class="project-card-body">
+                <p class="project-desc">Workflow de aprobaciones multi-paso en SAP BTP usando BTP Workflow Service. Aprobaciones de órdenes de compra con notificaciones por email, integración con Fiori Inbox y backend CAP.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">SAP BTP</span>
+                  <span class="tech-tag">Workflow Service</span>
+                  <span class="tech-tag">CAP</span>
+                  <span class="tech-tag">Fiori Inbox</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/Ger678/btp-workflow-approvals" target="_blank" class="project-link"><span class="sap-icon">&#xe1c4;</span> Ver en GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-card-top">
+                <span class="project-icon-box sap-icon">&#xe007;</span>
+                <h3>openai-btp-chatbot</h3>
+              </div>
+              <div class="project-card-body">
+                <p class="project-desc">Chatbot impulsado por IA construido en SAP BTP usando OpenAI API + CAP. Interfaz de lenguaje natural para consultar datos SAP, integrado con frontend SAPUI5 y SAP HANA.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">SAP BTP</span>
+                  <span class="tech-tag">OpenAI API</span>
+                  <span class="tech-tag">CAP</span>
+                  <span class="tech-tag">SAPUI5</span>
+                  <span class="tech-tag">SAP HANA</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/Ger678/openai-btp-chatbot" target="_blank" class="project-link"><span class="sap-icon">&#xe1c4;</span> Ver en GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-card-top">
+                <span class="project-icon-box sap-icon">&#xe0a5;</span>
+                <h3>sapui5-custom-controls</h3>
+              </div>
+              <div class="project-card-body">
+                <p class="project-desc">Librería de controles SAPUI5 reutilizables: filtros inteligentes, gráficos personalizados, componentes con tema BTP y XML fragments para aplicaciones Fiori enterprise.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">SAPUI5</span>
+                  <span class="tech-tag">Fiori</span>
+                  <span class="tech-tag">SAP BTP</span>
+                  <span class="tech-tag">XML Fragments</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/Ger678/sapui5-custom-controls" target="_blank" class="project-link"><span class="sap-icon">&#xe1c4;</span> Ver en GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-card-top">
+                <span class="project-icon-box sap-icon">&#xe06e;</span>
+                <h3>btp-destination-service</h3>
+              </div>
+              <div class="project-card-body">
+                <p class="project-desc">Patrones del SAP BTP Destination Service: conexión a APIs externas, S/4HANA y sistemas on-premise desde Cloud Foundry usando CAP y el Destination Service.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">SAP BTP</span>
+                  <span class="tech-tag">Destination Service</span>
+                  <span class="tech-tag">Cloud Foundry</span>
+                  <span class="tech-tag">CAP</span>
+                  <span class="tech-tag">S/4HANA</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/Ger678/btp-destination-service" target="_blank" class="project-link"><span class="sap-icon">&#xe1c4;</span> Ver en GitHub</a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-card-top">
+                <span class="project-icon-box sap-icon">&#xe148;</span>
+                <h3>sap-cap-fiori-crud</h3>
+              </div>
+              <div class="project-card-body">
+                <p class="project-desc">Aplicación CRUD completa con SAP CAP (Cloud Application Programming Model) + Fiori Elements. Demuestra modelado CDS, servicios OData y anotaciones SAPUI5 Fiori Elements.</p>
+                <div class="project-tech">
+                  <span class="tech-tag">CAP</span>
+                  <span class="tech-tag">CDS</span>
+                  <span class="tech-tag">OData</span>
+                  <span class="tech-tag">Fiori Elements</span>
+                  <span class="tech-tag">SAPUI5</span>
+                </div>
+                <div class="project-actions">
+                  <a href="https://github.com/Ger678/sap-cap-fiori-crud" target="_blank" class="project-link"><span class="sap-icon">&#xe1c4;</span> Ver en GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-prev" aria-label="Proyecto anterior" onclick="moveCarousel(-1)">&#8592;</button>
+          <button class="carousel-btn carousel-next" aria-label="Proyecto siguiente" onclick="moveCarousel(1)">&#8594;</button>
+        </div>
+        <div class="carousel-dots-bar" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
+  <section class="sap-skills">
+    <div class="container">
+      <h2 class="sap-section-title"><span class="sap-accent"><span class="sap-icon">&#xe0a5;</span></span> Stack Tecnico</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4 class="skill-cat-title">SAP BTP &amp; Fiori</h4>
+          <div class="skill-item"><span>SAPUI5</span><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div></div>
+          <div class="skill-item"><span>CAP / CAPM</span><div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div></div>
+          <div class="skill-item"><span>OData</span><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div></div>
+          <div class="skill-item"><span>Fiori Elements</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div></div>
+          <div class="skill-item"><span>Cloud Foundry</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+          <div class="skill-item"><span>RAP</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+        </div>
+        <div class="skill-category">
+          <h4 class="skill-cat-title">Backend &amp; Integraciones</h4>
+          <div class="skill-item"><span>ABAP</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+          <div class="skill-item"><span>Node.js</span><div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div></div>
+          <div class="skill-item"><span>Python</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+          <div class="skill-item"><span>S/4HANA Cloud</span><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div></div>
+          <div class="skill-item"><span>SAP HANA</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+          <div class="skill-item"><span>REST APIs</span><div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div></div>
+        </div>
+        <div class="skill-category">
+          <h4 class="skill-cat-title">Frontend &amp; AI</h4>
+          <div class="skill-item"><span>Angular</span><div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div></div>
+          <div class="skill-item"><span>OpenAI APIs</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+          <div class="skill-item"><span>n8n Automation</span><div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div></div>
+          <div class="skill-item"><span>Thingworx / IoT</span><div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div></div>
+          <div class="skill-item"><span>SharePoint</span><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div></div>
+          <div class="skill-item"><span>SAP DMS</span><div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sap-education">
+    <div class="container">
+      <h2 class="sap-section-title"><span class="sap-accent"><span class="sap-icon">&#xe032;</span></span> Educacion</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-icon sap-icon">&#xe032;</div>
+          <h3>Tecnico en Desarrollo de Software</h3>
+          <p class="edu-inst">UPATECO</p>
+          <p class="edu-year">2025</p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon sap-icon">&#xe10b;</div>
+          <h3>Automatizacion con IA (n8n)</h3>
+          <p class="edu-inst">Formacion continua autodidacta</p>
+          <p class="edu-year">2025 - Actualidad</p>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon sap-icon">&#xe0a5;</div>
+          <h3>Programacion PLC</h3>
+          <p class="edu-inst">Capacitacion industrial en curso</p>
+          <p class="edu-year">2025 - Actualidad</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sap-contact">
+    <div class="container">
+      <h2 class="sap-section-title"><span class="sap-accent"><span class="sap-icon">&#xe070;</span></span> Contacto</h2>
+      <div class="contact-content">
+        <p class="contact-desc">Tenes un proyecto SAP BTP o enterprise? Hablemos!</p>
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/german-aguirre/" target="_blank" class="contact-btn">LinkedIn</a>
+          <a href="https://portfolio-german-3a245.web.app/" target="_blank" class="contact-btn secondary">Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer class="sap-footer">
     <p>2026 German Aguirre &middot; SAP BTP Developer &middot; Rosario de Lerma, Salta, Argentina</p>
   </footer>
-
-  <script src="sap-btp.js"></script>
   <script>
-    /* ===== CAROUSEL LOGIC ===== */
-    (function() {
-      var wrapper = document.getElementById('carouselWrapper');
-      var track = document.getElementById('carouselTrack');
-      var prevBtn = document.getElementById('prevBtn');
-      var nextBtn = document.getElementById('nextBtn');
-      var dotsContainer = document.getElementById('carouselDots');
-      var cards = track ? track.querySelectorAll('.github-carousel-card') : [];
-
-      var currentIndex = 0;
-      var visibleCount = 3;
-
-      function getVisibleCount() {
-        var w = window.innerWidth;
-        if (w <= 768) return 1;
-        if (w <= 1024) return 2;
-        return 3;
+    function updateIcon(){
+      document.getElementById('themeIcon').innerHTML = document.body.classList.contains('light') ? '&#9728;' : '&#9790;';
+    }
+    function toggleTheme(){
+      document.body.classList.toggle('light');
+      localStorage.setItem('sap-theme', document.body.classList.contains('light') ? 'light' : 'dark');
+      updateIcon();
+    }
+    (function(){
+      if(localStorage.getItem('sap-theme') === 'light') document.body.classList.add('light');
+      updateIcon();
+    })();
+  </script>
+  <script src="matrix.js"></script>
+  <script>
+    (function(){
+      const track = document.querySelector('.carousel-track');
+      const dotsWrap = document.getElementById('carouselDots');
+      if(!track || !dotsWrap) return;
+      const allCards = Array.from(track.children);
+      const total = allCards.length;
+      let index = 0;
+      let autoTimer;
+      for(let i=0;i<total;i++){
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i===0 ? ' active' : '');
+        dot.setAttribute('aria-label','Ir al proyecto ' + (i+1));
+        dot.addEventListener('click', function(){ goToCarousel(i); });
+        dotsWrap.appendChild(dot);
       }
-
-      function setCardWidths() {
-        if (!wrapper || !cards.length) return;
-        var vc = getVisibleCount();
-        var gap = 24;
-        var totalGaps = (vc - 1) * gap;
-        var cardW = (wrapper.offsetWidth - totalGaps) / vc;
-        for (var i = 0; i < cards.length; i++) {
-          cards[i].style.width = cardW + 'px';
-          cards[i].style.minWidth = cardW + 'px';
-          cards[i].style.maxWidth = cardW + 'px';
-          cards[i].style.flexShrink = '0';
-        }
+      function update(){
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        allCards.forEach(function(card, i){ card.classList.toggle('active', i === index); });
+        dotsWrap.querySelectorAll('.carousel-dot').forEach(function(d,i){ d.classList.toggle('active', i===index); });
       }
-
-      function getTotalSlides() {
-        return Math.max(1, cards.length - visibleCount + 1);
+      function resetAuto(){
+        clearInterval(autoTimer);
+        autoTimer = setInterval(function(){ index = (index + 1) % total; update(); }, 4000);
       }
-
-      function buildDots() {
-        dotsContainer.innerHTML = '';
-        var total = getTotalSlides();
-        for (var i = 0; i < total; i++) {
-          var dot = document.createElement('div');
-          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-          (function(idx) {
-            dot.addEventListener('click', function() { goTo(idx); });
-          })(i);
-          dotsContainer.appendChild(dot);
-        }
-      }
-
-      function updateDots() {
-        var dots = dotsContainer.querySelectorAll('.carousel-dot');
-        dots.forEach(function(d, i) { d.classList.toggle('active', i === currentIndex); });
-      }
-
-      function getSlideOffset() {
-        if (!cards[0]) return 0;
-        return cards[0].offsetWidth + 24;
-      }
-
-      function goTo(index) {
-        var total = getTotalSlides();
-        currentIndex = Math.max(0, Math.min(index, total - 1));
-        var offset = currentIndex * getSlideOffset();
-        track.style.transform = 'translateX(-' + offset + 'px)';
-        prevBtn.disabled = currentIndex === 0;
-        nextBtn.disabled = currentIndex >= total - 1;
-        updateDots();
-      }
-
-      window.carouselMove = function(dir) {
-        goTo(currentIndex + dir);
+      window.moveCarousel = function(dir){
+        index = (index + dir + total) % total;
+        update();
+        resetAuto();
       };
-
-      function init() {
-        visibleCount = getVisibleCount();
-        setCardWidths();
-        buildDots();
-        goTo(0);
-      }
-
-      window.addEventListener('resize', function() {
-        visibleCount = getVisibleCount();
-        setCardWidths();
-        buildDots();
-        goTo(0);
-      });
-
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-      } else {
-        init();
-      }
+      window.goToCarousel = function(i){
+        index = i;
+        update();
+        resetAuto();
+      };
+      update();
+      resetAuto();
     })();
   </script>
 </body>
